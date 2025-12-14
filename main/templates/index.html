@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagar Dhok | Backend Developer</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <img src="{% static 'images/profile.jpg' %}" alt="Sagar Dhok" class="avatar">
+
+    <h1>Sagar Dhok</h1>
+    <p class="subtitle">Backend Developer • Python • Django • REST APIs</p>
+
+    <div class="hero-actions">
+        <a href="{% static 'resume/resume.pdf' %}" class="btn primary" download>
+            Download Resume
+        </a>
+        <a href="https://github.com/SagarDhok" target="_blank" class="btn outline">
+            GitHub
+        </a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+    <h2>About Me</h2>
+    <p>
+        Backend Developer specializing in Python, Django, and REST APIs.
+        I build clean, scalable backend systems with production-style
+        architecture, security-focused workflows, and real-world problem solving.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section class="skills">
+    <h2>Technical Skills</h2>
+
+    <div class="skills-grid">
+        <div>
+            <h4>Backend</h4>
+            <p>Python, Django, Django REST Framework</p>
+        </div>
+
+        <div>
+            <h4>Databases</h4>
+            <p>MySQL, SQLite, PostgreSQL (basic)</p>
+        </div>
+
+        <div>
+            <h4>APIs & Auth</h4>
+            <p>REST APIs, Token Authentication</p>
+        </div>
+
+        <div>
+            <h4>Tools</h4>
+            <p>Git, GitHub, Postman, Vscode , Pycharm</p>
+        </div>
+        <div>
+            <h4>Frontend</h4>
+            <p>HTML, CSS, JavaScript</p>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECT -->
+<section class="projects">
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+
+        <!-- BIG PROJECT -->
+        <div class="project-card highlight">
+            <h3>Smart ATS — Enterprise Applicant Tracking System</h3>
+
+            <p>
+                Production-grade Applicant Tracking System inspired by real-world
+                platforms like Greenhouse and Lever, focused on backend architecture,
+                security, and hiring workflows.
+            </p>
+
+            <ul class="project-points">
+                <li>Resume parsing & automated candidate scoring</li>
+                <li>Role-Based Access Control (Admin / HR / Candidate)</li>
+                <li>Secure HR onboarding via token-based email invites</li>
+                <li>End-to-end application workflow</li>
+            </ul>
+
+            <span class="tech">
+                Django • DRF • MySQL • Token Auth • PyPDF2
+            </span>
+
+            <div class="project-links">
+                <a href="https://smart-ats-v0yf.onrender.com" target="_blank">Live Demo</a>
+                <a href="https://github.com/SagarDhok/Smart_ATS" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <!-- SMALL PROJECT 1 -->
+        <div class="project-card">
+            <h3>RESTful Blog API</h3>
+
+            <p>
+                Backend API for blog management with authentication and CRUD operations.
+            </p>
+
+            <span class="tech">
+                Django • DRF • JWT • SQLite
+            </span>
+
+            <a href="https://github.com/SagarDhok/blog-api" target="_blank">
+                View on GitHub →
+            </a>
+        </div>
+
+        <!-- SMALL PROJECT 2 -->
+        <div class="project-card">
+            <h3>User Authentication Service</h3>
+
+            <p>
+                Token-based authentication system with role handling and secure access.
+            </p>
+
+            <span class="tech">
+                Django • Token Auth • REST APIs
+            </span>
+
+            <a href="https://github.com/SagarDhok/auth-service" target="_blank">
+                View on GitHub →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact">
+    <h2>Connect With Me</h2>
+
+    <div class="contact-card">
+        <strong>Sagar Dhok</strong>
+        <p>Backend Developer (Python • Django • REST APIs • MySQL)</p>
+
+        <div class="contact-links">
+            <a href="https://github.com/SagarDhok" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/sagardhok" target="_blank">LinkedIn</a>
+            <a href="mailto:sdhok041@gmail.com">Email</a>
+            <a href="https://x.com/SagarDh0k" target="_blank">X (Twitter)</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Sagar Dhok • Built with Django</p>
+</footer>
+
+</body>
+</html>
