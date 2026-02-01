@@ -60,16 +60,18 @@
 
     <div class="project-grid">
         <div class="project-card highlight">
-            <h3>Smart ATS — Applicant Tracking System</h3>
-            <p>Production-grade ATS focused on backend architecture.</p>
+            <h3>Smart ATS — Application Tracking System</h3>
+            <p>Role-based recruitment platform with 4-tier access hierarchy and secure invite-only recruiter onboarding.</p>
 
             <ul class="project-points">
-                <li>Role-Based Access Control (Admin / HR)</li>
-                <li>Secure invite-based HR onboarding</li>
-                <li>Resume parsing & automated scoring</li>
+                <li>Built 4-tier access hierarchy (Superuser, Admin, Recruiter, Candidate) with custom DRF permissions and query-level data isolation</li>
+                <li>Implemented secure invite-only recruiter onboarding using UUID-based tokens with expiration tracking and audit logging</li>
+                <li>Designed fault-tolerant PDF resume parsing pipeline handling encrypted and malformed files with weighted candidate scoring</li>
+                <li>Architected cloud-native resume storage using Supabase Object Storage to overcome ephemeral filesystem limitations</li>
+                <li>Developed REST APIs with token-based authentication and role-restricted endpoints</li>
             </ul>
 
-            <span class="tech">Django • DRF • MySQL</span>
+            <span class="tech">Django • DRF • MySQL • Supabase • Brevo Email API</span>
 
             <div class="project-links">
                 <a href="https://smart-ats-v0yf.onrender.com" target="_blank">Live Demo</a>
@@ -77,18 +79,24 @@
             </div>
         </div>
 
-        <div class="project-card">
-            <h3>RESTful Blog API</h3>
-            <p>Blog backend with authentication and CRUD operations.</p>
-            <span class="tech">Django • DRF • JWT</span>
-            <a href="https://github.com/SagarDhok/blog-api" target="_blank">GitHub →</a>
-        </div>
+        <div class="project-card highlight">
+            <h3>Movie Opinion Meter</h3>
+            <p>Django backend with dual voting systems and real-time vote aggregation for movie opinions and hype tracking.</p>
 
-        <div class="project-card">
-            <h3>User Authentication Service</h3>
-            <p>Token-based authentication system with role handling.</p>
-            <span class="tech">Django • Token Auth</span>
-            <a href="https://github.com/SagarDhok/auth-service" target="_blank">GitHub →</a>
+            <ul class="project-points">
+                <li>Built dual voting systems (post-release opinions and pre-release hype) enforced via database-level unique constraints</li>
+                <li>Implemented real-time vote aggregation using Django ORM annotations for category-wise percentages at query level</li>
+                <li>Optimized API queries using select_related and prefetch_related to eliminate N+1 issues when loading movies with genres, cast, and crew</li>
+                <li>Developed REST APIs for voting, reviews, and AI-assisted review rewriting with authenticated endpoints</li>
+                <li>Designed normalized relational schemas using junction tables and TMDB IDs to prevent duplicate records</li>
+            </ul>
+
+            <span class="tech">Django • DRF • PostgreSQL • TMDB API</span>
+
+            <div class="project-links">
+                <a href="https://movie-opinion-meter.onrender.com" target="_blank">Live Demo</a>
+                <a href="https://github.com/SagarDhok/Movie_Opinion_Meter" target="_blank">GitHub</a>
+            </div>
         </div>
     </div>
 </section>
