@@ -759,11 +759,13 @@ section {
 }
 
 /* ================= RESPONSIVE ================= */
+
+/* Tablet */
 @media (max-width: 900px) {
     .hero-inner {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 60px;
+        gap: 48px;
     }
 
     .hero-photo {
@@ -772,6 +774,8 @@ section {
 
     .hero-description {
         max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero-buttons {
@@ -785,71 +789,296 @@ section {
     .stats {
         gap: 24px;
     }
+
+    .about-content {
+        max-width: 100%;
+    }
+
+    .contact-content {
+        max-width: 100%;
+    }
 }
 
+/* Mobile */
 @media (max-width: 640px) {
 
+    /* Base spacing */
     .container,
     section,
     .nav,
     .hero {
-        padding-left: 24px;
-        padding-right: 24px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Navigation */
+    .nav {
+        padding: 16px 20px;
+    }
+
+    .nav-logo {
+        font-size: 0.95rem;
     }
 
     .nav-links {
         display: none;
     }
 
-    section {
-        padding-top: 80px;
-        padding-bottom: 80px;
+    .nav-cta {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+
+    .hero-inner {
+        gap: 40px;
     }
 
     .photo {
-        width: 240px;
-        height: 240px;
+        width: 200px;
+        height: 200px;
+        border-width: 2px;
     }
 
     .photo-glow {
-        width: 280px;
-        height: 280px;
+        width: 230px;
+        height: 230px;
     }
 
-    .skills-grid {
-        grid-template-columns: 1fr;
+    .status {
+        bottom: 10px;
+        right: 10px;
+        padding: 6px 12px;
+        font-size: 0.7rem;
     }
 
-    .stats {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
+    .status-dot {
+        width: 6px;
+        height: 6px;
     }
 
-    .stat-value {
-        font-size: 2rem;
+    .hero-content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 16px;
     }
 
-    .project-card {
-        padding: 28px;
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 28px;
     }
 
     .hero-buttons {
         flex-direction: column;
+        gap: 12px;
     }
 
     .btn {
         width: 100%;
         justify-content: center;
+        padding: 14px 24px;
+        font-size: 0.9rem;
+    }
+
+    /* Sections */
+    section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .section-label {
+        font-size: 0.75rem;
+        margin-bottom: 12px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 40px;
+    }
+
+    /* About */
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    .stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-top: 40px;
+        padding-top: 40px;
+    }
+
+    .stat-value {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+
+    /* Skills */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .skill-card {
+        padding: 24px;
+        border-radius: 12px;
+    }
+
+    .skill-icon {
+        font-size: 1.6rem;
+        margin-bottom: 14px;
+    }
+
+    .skill-card h4 {
+        font-size: 1rem;
+    }
+
+    .skill-card p {
+        font-size: 0.85rem;
+        margin-bottom: 14px;
+    }
+
+    .skill-tags span {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+
+    /* Projects */
+    .project-card {
+        padding: 24px;
+        border-radius: 16px;
+        margin-bottom: 20px;
+    }
+
+    .project-label {
+        font-size: 0.7rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+
+    .project-card>.project-content>p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    .project-tech {
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .project-tech span {
+        font-size: 0.7rem;
+        padding: 6px 10px;
+    }
+
+    .project-features li {
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+    }
+
+    .project-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-links a {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 20px;
+        font-size: 0.85rem;
+    }
+
+    /* Contact */
+    .contact-content>p {
+        font-size: 1rem;
+        margin-bottom: 28px;
     }
 
     .contact-email {
         flex-direction: column;
         text-align: center;
         width: 100%;
+        padding: 16px 20px;
+        gap: 12px;
+    }
+
+    .contact-email span {
+        font-size: 0.95rem;
+    }
+
+    .copy-btn {
+        width: 100%;
+        padding: 10px 16px;
     }
 
     .socials {
         justify-content: center;
+        gap: 10px;
+    }
+
+    .social-btn {
+        width: 46px;
+        height: 46px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 28px 20px;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
+    }
+
+    /* Disable heavy animations on mobile for performance */
+    .photo {
+        animation: none;
+    }
+
+    .photo-glow {
+        animation: none;
+    }
+
+    .skill-card:hover,
+    .project-card:hover,
+    .social-btn:hover {
+        transform: none;
+    }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+    .photo {
+        width: 160px;
+        height: 160px;
+    }
+
+    .photo-glow {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+
+    .stats {
+        gap: 8px;
     }
 }
 
@@ -859,7 +1088,7 @@ section {
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -868,7 +1097,7 @@ section {
 
 ::-webkit-scrollbar-thumb {
     background: var(--red-dark);
-    border-radius: 4px;
+    border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
