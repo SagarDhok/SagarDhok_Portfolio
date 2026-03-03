@@ -626,10 +626,14 @@ section {
 }
 
 .project-features li::before {
-    content: '—';
+    content: '';
     position: absolute;
-    left: 0;
-    color: var(--red);
+    left: 2px;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    background: var(--red);
+    border-radius: 50%;
 }
 
 .project-card:hover .project-features li {
