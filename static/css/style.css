@@ -434,6 +434,10 @@ section {
     gap: 20px;
 }
 
+.skills-grid-5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
 .skill-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
@@ -468,8 +472,18 @@ section {
 }
 
 .skill-icon {
-    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
     margin-bottom: 20px;
+    color: var(--red);
+    transition: color 0.3s;
+}
+
+.skill-card:hover .skill-icon {
+    color: var(--text);
 }
 
 .skill-card h4 {
@@ -782,8 +796,9 @@ section {
         justify-content: center;
     }
 
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .skills-grid,
+    .skills-grid-5 {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .stats {
@@ -922,7 +937,8 @@ section {
     }
 
     /* Skills */
-    .skills-grid {
+    .skills-grid,
+    .skills-grid-5 {
         grid-template-columns: 1fr;
         gap: 16px;
     }
